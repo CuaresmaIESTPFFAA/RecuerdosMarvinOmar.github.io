@@ -14,6 +14,7 @@ body {
 }
 
 /* Estilo del encabezado */
+/* Estilo del encabezado */
 header {
     background-color: var(--guinda);
     color: white;
@@ -21,6 +22,25 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%; /* Ocupa todo el ancho */
+    height: 60px; /* Asegura la misma altura */
+    box-sizing: border-box;
+}
+
+/* Estilo del footer */
+footer {
+    background-color: var(--guinda);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    width: 100%; /* Ocupa todo el ancho */
+    height: 60px; /* Misma altura que el header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative; /* Para que no se sobreponga */
 }
 
 nav {
@@ -119,18 +139,7 @@ nav a:hover {
     width: 32px;
     height: 32px;
 }
-footer {
-    background-color: var(--guinda);
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 18px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px; /* Ajusta según la altura de la barra de navegación */
-}
+
 html, body {
     height: 100%;
     display: flex;
