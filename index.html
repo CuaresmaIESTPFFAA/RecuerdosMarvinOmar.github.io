@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuerdos de Marvin Omar</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
+</head>
+<script>    
+    function mostrarSeccion(id) {
+        // Ocultar todas las secciones
+        document.querySelectorAll('.contenido').forEach(seccion => {
+            seccion.classList.add('oculto');
+        });
+
+        // Mostrar la sección seleccionada
+        document.getElementById(id).classList.remove('oculto');
+
+        // Desplazar suavemente a la sección
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+<audio id="musica" loop>
+    <source src="images/Roberto Carlos - Amigo (Letra).mp3" type="audio/mp3">
+    Tu navegador no soporta audio.
+</audio>
+
+<button onclick="toggleMusica()">🔊 Activar / Desactivar Música</button>
+
+<script>
+    let musica = document.getElementById("musica");
+    musica.volume = 0.5; // Volumen al 50%
+
+    function toggleMusica() {
+        if (musica.paused) {
+            musica.play();
+        } else {
+            musica.pause();
+        }
+    }
+</script>
+
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <div class="logo"><img src="images/U-removebg-preview.png" alt=""></div>
+        <nav>
+            <a href="#recuerdos" onclick="mostrarSeccion('recuerdos')">Recuerdos</a>
+            <a href="#fotos" onclick="mostrarSeccion('fotos'); return false;">Fotos</a>
+            <a href="#videos" onclick="mostrarSeccion('videos'); return false;">Videos</a>
+        </nav>
+    </header>
+    
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Sección de recuerdos -->
+        </section>
+        <section id="recuerdos" class="contenido">
+            <h2>Recuerdos de Marvin Omar</h2>
+            <p>Momentos especiales que siempre vivirán en nuestros corazones.</p>
+            
+            <div class="video-container">
+                <video controls autoplay muted loop width="91%">
+                    <source src="images/pp hd.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+            <p>"Las historias que compartimos seguirán vivas mientras haya alguien que las cuente."</p>
+        
+            <div class="anecdotas">
+                <div class="anecdota">
+                    <h3>🔹 Melissa (Hermana)</h3>
+                    <p>"Una anécdota, cuando iba a comprar al gordo con falda y siempre me decía que a dónde voy a ir así, me quitaba la plata todo celoso e iba el jajajjaa eso me daba mucha risa porque me hacía sentir importante yo tan chiquita y mi hermano celándome"</p>
+                </div>
+        
+                <div class="anecdota">
+                    <h3>🔹 Jacky (Prima)</h3>
+                    <p>"a mí me tiró una patada porque me vio con un amigo🤭 todo celoso
+                        "</p>
+                </div>
+        
+                <div class="anecdota">
+                    <h3>🔹 Sarita (Prima)</h3>
+                    <p>"Marvin siempre se llevaba a Geanfranco a su cuarto cuando le encontraba en la calle jugando y venia a la mami y decia que al gean se lo habian llevado y yo asustada salia a buscarlo despues de un rato me decia: yo lo tengo cuidalo porque se puede perder como Pablito"</p>
+                </div>
+        
+                <div class="anecdota">
+                    <h3>🔹 Julia (Tia)</h3>
+                    <p>"Marvin cuando lo encontraba con una chica siempre me decia: "Tia cuidado con decirle a mi mama" que no pensara mal que era solamente una amiga y mas na jajaja"</p>
+                </div>
+        
+                <div class="anecdota">
+                    <h3>🔹 Geanfranco (Primo)</h3>
+                    <p>"Me recuerdo que de niño una vez había agarrado una naranja de la casa de mi tía Mary y Meli se molestó o algo así jajaja Marvin me dio igual la naranja, ese gesto aunque simple, me marco mucho y con esa acción me demostró la clase de persona noble y buena, esa imagen es la que viene a mi cabeza cuando escucho su nombre."</p>
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- Botones para mostrar álbumes -->
+        <section class="album">
+            <button class="btn" onclick="mostrarSeccion('fotos')">Ver Álbum de Fotos</button>
+            <button class="btn" onclick="mostrarSeccion('videos')">Ver Álbum de Videos</button>
+        </section>
+        
+        <!-- Sección de fotos -->
+        <section id="fotos" class="contenido oculto">
+            <h2>Álbum de Fotos</h2>
+            <p>Aquí puedes ver las fotos en memoria de Marvin Omar.</p>
+            <div class="foto-grid">
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/1.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>Dia feliz junto a tus abuelitas</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Puedes agregar más fotos aquí -->
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/2.JPG" alt="Recuerdo 2">
+                        </div>
+                        <div class="foto-back">
+                            <p>Un dia de playita</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/3.jpg" alt="Recuerdo 3">
+                        </div>
+                        <div class="foto-back">
+                            <p>Cumpliendo un añito mas junto a tus hermanos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/4.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>Baile con mi promos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/5.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>El tiempo pasa, los recuerdos quedan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/6.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>Nuestra historia, escrita con amor y risas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/7.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>Cada vez que cierro los ojos, vuelvo a aquellos días en los que aún estábamos juntos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/8.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>Siempre habrá un lugar para ti en mis recuerdos y en mi corazón</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/9.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>Tu risa, tu amor y tus enseñanzas vivirán por siempre en nosotros.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/10.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>Vivirás en cada historia, en cada lágrima, en cada risa que nos regalaste.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/11.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>El amor verdadero no conoce de despedidas, solo de reencuentros en el alma.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/12.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>Crecimos juntos, aprendimos juntos y jamás nos olvidaremos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/13.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>Nunca supe cuánto dolía extrañar hasta que la vida me enseñó a vivir sin ti.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/14.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>Nada reemplaza una tarde de risas con la familia y los amigos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/15.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>Más que compañeros de clase, cómplices de aventuras.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/16.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>Tu risa sigue resonando en cada rincón donde alguna vez fuimos felices</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/17.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>La muerte no nos roba a quienes amamos, solo nos enseña a amarlos de otra manera</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/18.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>Creciste y, aunque el destino nos separó, en cada recuerdo sigues estando aquí</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/0.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>El tiempo pasó volando, pero en mi memoria siempre serás aquel niño lleno de sueños.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div class="foto-inner">
+                        <div class="foto-front">
+                            <img src="images/20.JPG" alt="Recuerdo 1">
+                        </div>
+                        <div class="foto-back">
+                            <p>Hay amistades que no necesitan palabras, solo recuerdos compartidos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+            </div>
+        </section>
+
+        <!-- Sección de videos -->
+        <section id="videos" class="contenido oculto">
+            <h2>Álbum de Videos</h2>
+            <p>Momentos inolvidables capturados en video.</p>
+            <div class="video-container">
+                <video controls width="80%">
+                    <source src="images/video4.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+                <video controls width="80%">
+                    <source src="images/video.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+                <video controls width="80%">
+                    <source src="images/pp hd.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+                <H3>Aunque ya no estés físicamente con nosotros, tu risa, tu alegría y tu amor siguen iluminando nuestros corazones. No hay día en que no pensemos en ti, porque las personas especiales nunca se van, solo caminan a nuestro lado de una manera diferente.</H3>
+            </div>
+        </section>
+    </div>
+
+    <!-- Script para manejar la visibilidad de las secciones -->
+    <script>
+        function mostrarSeccion(id) {
+            document.querySelectorAll('.contenido').forEach(seccion => {
+                seccion.classList.add('oculto');
+            });
+            document.getElementById(id).classList.remove('oculto');
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+<footer>
+    <p>&copy; 2025 En memoria de Marvin Omar. Todos los derechos reservados.</p>
+</footer>
+
+</html>
